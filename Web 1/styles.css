@@ -1,0 +1,337 @@
+:root {
+    --yellow: #f8d864;
+    --red: #cf2313;
+    --light-red: #e74c3e;
+    --green: #7cad46;
+    --orange: #e28f30;
+    --pizza: #404042;
+    --orange-pasta: #eeb301;
+    --drink: #bce3e8;
+    --dessert: #f8c6b7;
+    --violet: #cb22ff;
+    --aqua: #3ea6c5;
+    font-family: 'Kalam', cursive;
+}
+
+html {
+    scroll-padding-top: 200px;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    display: inline;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+section {
+    padding: 30px;
+}
+
+a {
+    color: white;
+}
+
+a:visited {
+    color: var(--yellow);
+}
+
+.logo img {
+    width: 50px;
+    padding-right: 15px;
+    vertical-align: middle;
+}
+
+.header-content {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-content ul {
+    list-style-type: none;
+}
+
+.header-content li {
+    display: inline-block;
+    align-self: center;
+    text-align: center;
+    margin: 0 20px;
+}
+
+.section-first {
+    margin-top: 89px;
+}
+
+.section-pizza {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/000/695/413/large_2x/seamless-pattern-of-pizza-isolated-on-black-background-vector.jpg);
+    background-size: 25%;
+}
+
+.section-pasta {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/011/450/173/large_2x/multi-colored-pasta-fusilli-seamless-pattern-symbol-of-italian-cuisine-menu-cartoon-illustration-on-a-white-isolated-background-vector.jpg);
+    background-size: 25%;
+}
+
+.section-drink {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/000/144/423/large_2x/drinks-pattern-vector.jpg);
+    background-size: 40%;
+}
+
+.section-dessert {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/000/100/287/large_2x/vector-sweets-pattern-background.jpg);
+    background-size: 50%;
+    margin-bottom: -70px;
+}
+
+.container {
+    margin: auto;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column wrap;
+    box-shadow: 5px 5px 22px 6px #141414;
+}
+
+.container-pizza {
+    background-color: var(--pizza);
+}
+
+.container-pizza h2,
+.container-pizza p {
+    color: var(--red);
+}
+
+.container-pizza .price {
+    color: var(--yellow);
+}
+
+.container-pasta {
+    background-color: white;
+}
+
+.container-pasta h2,
+.container-pasta p {
+    color: var(--green);
+}
+
+.container-pasta .price {
+    color: var(--orange-pasta);
+}
+
+.container-drink {
+    background-color: var(--drink);
+}
+
+.container-drink h2,
+.container-drink p {
+    color: var(--pizza);
+}
+
+.container-drink .price {
+    color: var(--violet);
+}
+
+.container-dessert {
+    background-color: var(--dessert);
+}
+
+.container-dessert h2,
+.container-dessert p {
+    color: var(--aqua);
+}
+
+.container-dessert .price {
+    color: var(--aqua);
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    text-decoration: underline;
+    font-weight: bolder;
+    font-size: 20px;
+    color: var(--orange);
+    position: sticky;
+    top: 90px;
+}
+
+.title h1 {
+    margin: 15px 0;
+    position: sticky;
+}
+
+.section-logo {
+    width: 60px;
+    float: left;
+    margin: 10px 30px 0;
+    position: sticky;
+    top: 100px;
+}
+
+.food {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding: 0 40px 20px;
+    flex: 40%;
+}
+
+.food-name h2,
+h3 {
+    font-weight: 700;
+    margin: 0;
+}
+
+.food-name p {
+    margin: 0;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+
+.back-to-top-btn {
+    width: 70px;
+    float: right;
+    bottom: 20px;
+    right: 10px;
+    position: fixed;
+}
+
+footer {
+    margin-top: 70px;
+    padding: 10px 0px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+}
+
+footer img {
+    width: 28px;
+    margin-right: 10px;
+}
+
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .toggle-button {
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .header-content ul {
+        display: none; /* Display: flex para ver el menú*/
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    .header-content li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .header-content li a {
+        padding: .5rem 1rem;
+    }
+    
+    .header-content.active {
+        display: flex;
+    }
+
+    .back-to-top-btn {
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .toggle-button {
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .header-content ul {
+        display: none; /* Display: flex para ver el menú*/
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-content li {
+        text-align: center;
+    }
+
+    .header-content li a {
+        padding: .5rem 1rem;
+    }
+    
+    .header-content.active {
+        display: flex;
+    }
+
+    .back-to-top-btn {
+        width: 50px;
+    }
+}
